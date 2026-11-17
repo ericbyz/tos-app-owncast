@@ -1,0 +1,43 @@
+[Unit]
+Description=Owncast - self-hosted live streaming (RTMP in, HLS/WebRTC out) (TOS)
+After=network.target
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+[Service]
+Type=simple
+User=owncast
+Group=owncast
+EnvironmentFile=-/etc/owncast/owncast.env
+# upstream resolves data/ relative to the working directory
+WorkingDirectory=/var/lib/owncast
+# 0.3.0 persists config in the database; ports/keys injected via CLI flags
+ExecStart=/usr/local/owncast/bin/owncast --webserverport ${OWNCAST_WEB_PORT} --rtmpport ${OWNCAST_RTMP_PORT} --adminpassword ${OWNCAST_ADMIN_PASS} --streamkey ${OWNCAST_STREAM_KEY}
+TimeoutStartSec=30
+TimeoutStopSec=10
+
+# Security hardening (TOS 7 review requires NoNewPrivileges/ProtectSystem/ProtectHome;
+# Restart= is intentionally omitted — service lifecycle is managed by the platform)
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictRealtime=true
+# NOTE: MemoryDenyWriteExecute is intentionally omitted — it segfaults the
+# Go runtime on TOS 6.12 kernels (same as go2rtc; VM-verified)
+LockPersonality=true
+RestrictSUIDSGID=true
+RemoveIPC=true
+SystemCallArchitectures=native
+
+# config.yaml + data/ (database, HLS segments, recordings) are cwd-relative
+ReadWritePaths=/var/lib/owncast
+
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target

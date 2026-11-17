@@ -1,0 +1,16 @@
+# Upstream project pin — single source of truth for reproducible builds.
+# owncast is packaged unmodified from upstream owncast/owncast (MIT).
+# IMPORTANT: this package must NOT modify the upstream binary; it only adds
+# packaging metadata, a systemd unit, a config seed and docs.
+
+UPSTREAM_REPO=https://github.com/owncast/owncast
+UPSTREAM_LICENSE=MIT
+
+UPSTREAM_TAG=v0.3.0
+UPSTREAM_VERSION=0.3.0
+
+ASSET_x86_64=owncast-0.3.0-linux-64bit.zip
+ASSET_aarch64=owncast-0.3.0-linux-arm64.zip
+
+SHA256_x86_64=8753c12ce58b7d1120c815e49d19f8fd3cc1a53dc8e0abb581e212694ca670d8
+SHA256_aarch64=81dddbe81122fb998a071035f50aa3f6cbfc0a39d72a7a37ecb80118846b4256

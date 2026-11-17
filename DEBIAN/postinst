@@ -1,0 +1,48 @@
+#!/bin/bash
+# Post-installation script — runs after the package is installed
+set -e
+
+APPID="owncast"
+APP_DIR="/usr/local/${APPID}"
+
+if ! id -u "${APPID}" > /dev/null 2>&1; then
+    useradd --system --no-create-home --shell /usr/sbin/nologin "${APPID}" 2>/dev/null || true
+fi
+
+chown -R "${APPID}:${APPID}" "${APP_DIR}" 2>/dev/null || true
+
+# Data dir (cwd-relative per upstream design: data/owncast.db)
+mkdir -p /var/lib/owncast/data 2>/dev/null || true
+chown -R "${APPID}:${APPID}" /var/lib/owncast 2>/dev/null || true
+
+# Env seed: ports + admin pass + stream key generated once (survives upgrades)
+mkdir -p /etc/owncast 2>/dev/null || true
+if [ ! -f /etc/owncast/owncast.env ]; then
+    KEY="$(tr -dc A-Za-z0-9 </dev/urandom 2>/dev/null | head -c 24)"
+    [ -n "${KEY}" ] || KEY="live-$(head -c 6 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+    APASS="$(tr -dc A-Za-z0-9 </dev/urandom 2>/dev/null | head -c 16)"
+    [ -n "${APASS}" ] || APASS="oc-$(head -c 4 /dev/urandom | od -An -tx1 | tr -d ' \n')"
+    sed -e "s/__STREAMKEY__/${KEY}/" -e "s/__ADMINPASS__/${APASS}/" \
+        "${APP_DIR}/packaging-extras/owncast.env.default" > /etc/owncast/owncast.env
+    chmod 640 /etc/owncast/owncast.env
+    echo "owncast: stream key rtmp://<NAS>:1935/${KEY}  admin password: ${APASS}"
+fi
+
+# owncast transcodes with ffmpeg when available (optional; falls back gracefully)
+command -v ffmpeg >/dev/null 2>&1 || echo "WARNING: ffmpeg not found — install/enable it for transcoding; without it owncast cannot start"
+
+case "$1" in
+    configure)
+        if [ -n "$2" ]; then
+            echo "${APPID}: upgrading from version $2 (env in /etc/owncast and data preserved)"
+        fi
+        systemctl daemon-reload 2>/dev/null || true
+        systemctl enable "owncast.service" 2>/dev/null || true
+        systemctl start "owncast.service" 2>/dev/null || true
+        ;;
+    *) ;;
+esac
+
+echo "${APPID} installed successfully."
+echo "  watch: http://<NAS>:18239  push: rtmp://<NAS>:1935/<streamKey>"
+exit 0

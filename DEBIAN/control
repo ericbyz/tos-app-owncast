@@ -1,0 +1,15 @@
+Package: owncast
+Version: 0.3.0
+Architecture: amd64
+Section: net
+Priority: optional
+Maintainer: ericbyz <ericbyz@users.noreply.github.com>
+Depends: systemd
+Description: Self-hosted live streaming server with chat (Owncast)
+ Owncast is a self-hosted live streaming and chat server: push RTMP from
+ OBS or any encoder to the TNAS and viewers watch in the browser with
+ low-latency HLS playback, built-in chat, and a customizable front page.
+ Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey>
+ (key generated at install, stored in /var/lib/owncast/config.yaml).
+ Upstream project: https://github.com/owncast/owncast (MIT), packaged
+ unmodified.

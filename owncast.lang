@@ -1,0 +1,155 @@
+[zh-cn]
+name = "Owncast 自托管直播"
+auth = "ericbyz"
+descript = "自托管直播服务器:OBS 等推流软件把 RTMP 流推到 NAS(rtmp://<NAS>:1935/<推流密钥>),观众在浏览器里低延迟观看(HLS)+ 内置弹幕聊天。观看地址 http://<NAS>:18239,推流密钥安装时自动生成(存于 /var/lib/owncast/config.yaml)。上游二进制原样封装(MIT),转码依赖 ffmpeg(TOS 出厂自带)。"
+note = "1. 将上游 owncast/owncast(MIT)原样封装为 TOS 应用。"
+
+[zh-hk]
+name = "Owncast 自託管直播"
+auth = "ericbyz"
+descript = "自託管直播伺服器:OBS 等推流軟體把 RTMP 流推到 NAS(rtmp://<NAS>:1935/<推流密鑰>),觀眾在瀏覽器裡低延遲觀看(HLS)+ 內置彈幕聊天。觀看地址 http://<NAS>:18239。"
+note = "1. 将上游 owncast/owncast(MIT)原样封装为 TOS 应用。"
+
+[en-us]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[ko-kr]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "셀프 호스트 라이브 스트리밍 서버: OBS 등에서 RTMP로 NAS에 송신하고 시청자는 브라우저에서 저지연 HLS+채팅으로 시청합니다. 시청 URL http://<NAS>:18239, 스트림 키는 설치 시 생성. 업스트림 바이너리 무수정 패키징(MIT), 트랜스코딩에 ffmpeg 필요."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[ja-jp]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "セルフホスト配信サーバー:OBS などから RTMP で NAS に配信し、視聴者はブラウザで低遅延 HLS+チャットで視聴。視聴 URL は http://<NAS>:18239、ストリームキーはインストール時に生成。上流バイナリを無改修でパッケージ化(MIT)、トランスコードには ffmpeg が必要。"
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[de-de]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-Hosting-Livestreaming-Server: RTMP von OBS an die NAS pushen, Zuschauer sehen low-latency HLS mit integriertem Chat unter http://<NAS>:18239. Stream-Key wird bei der Installation generiert. Upstream unverändert paketiert (MIT), Transcodierung via ffmpeg."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[fr-fr]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Serveur de direct auto-hébergé : poussez du RTMP depuis OBS vers le NAS, les spectateurs regardent en HLS faible latence avec chat intégré sur http://<NAS>:18239. Clé de flux générée à l'installation. Amont intact (MIT), transcodage via ffmpeg."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[it-it]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[es-es]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Servidor de emisión autoalojado: envíe RTMP desde OBS al NAS, los espectadores ven HLS de baja latencia con chat integrado en http://<NAS>:18239. Clave de emisión generada al instalar. Upstream intacto (MIT), transcodificación vía ffmpeg."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[hu-hu]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[pl-pl]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[tr-tr]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[ru-ru]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Самостоятельный сервер прямых трансляций: отправляйте RTMP из OBS на NAS, зрители смотрят низколатентный HLS со встроенным чатом на http://<NAS>:18239. Ключ потока генерируется при установке. Оригинальные бинарники без изменений (MIT), транскодирование через ffmpeg."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[pt-pt]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[cs-cz]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[da-dk]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[nl-nl]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[nb-no]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[sv-se]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[el-gr]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[ro-ro]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[th-th]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[vi-vn]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[id-id]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[ar-sa]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."
+
+[he-il]
+name = "Owncast Live Streaming"
+auth = "ericbyz"
+descript = "Self-hosted live streaming server: push RTMP from OBS or any encoder to the NAS and viewers watch in the browser (low-latency HLS) with built-in chat. Watch at http://<NAS>:18239; push to rtmp://<NAS>:1935/<streamKey> (key generated at install). Packaged unmodified from upstream owncast/owncast (MIT); requires ffmpeg for transcoding."
+note = "1. Repackaged upstream owncast/owncast (MIT) unmodified for TOS."

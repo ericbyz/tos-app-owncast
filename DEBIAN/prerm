@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+APPID="owncast"
+case "$1" in
+    remove|deconfigure)
+        systemctl stop "owncast.service" 2>/dev/null || true
+        systemctl disable "owncast.service" 2>/dev/null || true
+        ;;
+    upgrade|failed-upgrade) ;;
+    *) ;;
+esac
+exit 0
